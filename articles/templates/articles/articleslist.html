@@ -1,0 +1,23 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>articlse</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+  </head>
+  <body>
+<h1>articlse_list  </h1>
+  {% for article in Article1 %}
+   <h2>
+     <a href="#">{{article.title}}</a></h2>
+<p>
+  {{article.snippet}}
+</p>
+<p>
+  {{article.date}}
+</p>
+     {% endfor %}
+  </body>
+</html>
